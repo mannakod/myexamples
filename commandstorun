@@ -1,2 +1,17 @@
 docker build -t mynginximage .
 docker run -p 8080:80 mynginximage
+---
+
+
+
+
+
+
+#this is optional
+#docker run -dp 127.0.0.1:3000:3000 practice
+-----------
+#below arre for kubernetes
+----------------
+#kubectl run nginxdemo --image=nginx --port=80
+#kubectl expose pod nginxdemo --name=nginxdemo --port=80
+#kubectl port-forward service/nginxdemo 7080:80

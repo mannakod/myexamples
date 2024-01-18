@@ -1,3 +1,4 @@
 #start kubectl
-kubectl start --force
+minikube start
+#minikube start --force
 

@@ -16,6 +16,9 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx:1.14.2
+      #this is directly base imaging taking from docker nginx
+        #image: nginx:1.14.2
+        #this is docker file uploaded on docker
+        image: mannakod/pullthiskube
         ports:
         - containerPort: 80

@@ -1,0 +1,32 @@
+apt update
+apt install nginx
+apt install certbot
+service nginx stop
+certbot certonly --standalone -d project.canvera.com
+#optional "sudo certbot renew"
+
+
+/etc/nginx/sites-available
+#add below lines 
+
+nano default
+
+server {
+    listen 443 ssl;
+    server_name project.canvera.com;
+
+    ssl_certificate /etc/letsencrypt/live/project.canvera.com/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/project.canvera.com/privkey.pem;
+
+    # Additional SSL configuration...
+
+    location . {
+        # Your existing server configuration...
+    }
+}
+
+
+
+
+
+service nginx start
